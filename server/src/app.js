@@ -50,6 +50,10 @@ app.use(
 );
 
 // ── 2. CORS ────────────────────────────────────────────────────────────────────
+console.log(
+  "CORS CLIENT_URL:",
+  JSON.stringify(process.env.CLIENT_URL)
+);
 const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:5173")
   .split(",")
   .map((o) => o.trim());
